@@ -29,7 +29,7 @@ $gallery = get_images('gallery');
 </head>
 <body>
   <header>
-    <h1><img src="img/kt2.png" alt="The Kitchen Treasury" /></h1>
+    <h1><img src="img/kt3.png" alt="The Kitchen Treasury" /></h1>
     <section id="address">
         <p>34 Hunter Street, Kirkcaldy</p>
     </section>
