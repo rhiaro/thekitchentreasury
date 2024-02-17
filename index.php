@@ -90,7 +90,7 @@ If you would like to book our homely cafe for a special event, or if you would l
     <ul>
       <li><a href="tel:+447523 178969"><img src="img/icon_phone.png" alt="Tel:" /> 07523 178969</a></li>
       <li><a href="mailto:hello@kitchentreasury.com"><img src="img/icon_email.png" alt="Email:" /> hello@kitchentreasury.com</a></li>
-      <li><a href="https://www.facebook.com/people/The-Kitchen-Treasury/"><img src="img/icon_fb.png" alt="Facebook:" /> The-Kitchen-Treasury</a></li>
+      <li><a href="https://www.facebook.com/people/The-Kitchen-Treasury/61554324862777/"><img src="img/icon_fb.png" alt="Facebook:" /> The-Kitchen-Treasury</a></li>
     </ul>
     <section id="map">
       <a href="geo:56.117064,-3.159086" id="noscript"><img src="img/map.png" alt="A map of Kirkcaldy with a marker at The Kitchen Treasury's location on Hunter Street" /></a>
