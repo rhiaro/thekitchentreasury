@@ -214,6 +214,7 @@ body {
   display: grid;
   grid-template-areas:
     "header"
+    "picture"
     "main"
     "gallery"
     "footer";
@@ -244,7 +245,6 @@ main {
   grid-area:  main;
   display: grid;
   grid-template-areas:
-  "picture"
   "intro"
   "menu";
 }
@@ -294,9 +294,10 @@ img {
   max-width: 100%;
 }
 
-section#picture {
-  background: #3f4768;
+#picture {
+  background: #fff;
   padding: 0;
+  line-height: 0;
 }
 
 main {

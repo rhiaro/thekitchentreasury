@@ -46,6 +46,9 @@ $gallery = get_images('gallery');
       </table>
     </section>
   </header>
+  <aside id="picture">
+    <img src="img/foodpic.jpg" alt="A green mug containing a foamy latte, on a wooden table in a cosy cafe" />
+  </aside>
   <main>
     <section id="intro">
       <p>
@@ -60,9 +63,6 @@ Local, seasonal ingredients
       <p>
 Vegan & gluten-free options
       </p>
-    </section>
-    <section id="picture">
-      <img src="img/foodpic.jpg" alt="A green mug containing a foamy latte, on a wooden table in a cosy cafe" />
     </section>
 
     <section id="menu">
