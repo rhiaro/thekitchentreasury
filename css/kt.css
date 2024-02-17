@@ -17,10 +17,6 @@ header {
   font-size:  1em;
 }
 
-aside {
-  background-color: #525e4a;
-}
-
 h1 {
   text-align:  center;
   font-weight:  bold;
@@ -49,7 +45,7 @@ h4 {
   font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-p, li {
+p {
   margin-top:  0.6em;
 }
 
@@ -159,7 +155,7 @@ main {
 }
 
 section {
-  padding:  1.6em 0.6em;
+  padding:  0.6em;
 }
 
 footer {
@@ -181,8 +177,15 @@ footer a:hover {
   color:  #525e4a;
 }
 footer ul {
-  padding:  1em;
+  padding:  0.6em;
   text-align: left;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 0.8em;
+  text-align: center;
+}
+footer ul li {
+  padding: 0.2em;
 }
 footer ul li img {
   height:  1.4em;
@@ -190,7 +193,6 @@ footer ul li img {
 }
 footer ul a {
   color:  #000;
-  font-weight:  bold;
   text-decoration: none;
   padding:  0.4em;
 }
@@ -212,10 +214,10 @@ body {
   display: grid;
   grid-template-areas:
     "header"
-    "aside"
     "main"
+    "gallery"
     "footer";
-  grid-template-rows: 0.8fr 0.4fr max-content max-content;
+  grid-template-rows: 0.8fr max-content 0.4fr max-content;
 }
 
 body.admin {
@@ -242,43 +244,44 @@ main {
   grid-area:  main;
   display: grid;
   grid-template-areas:
+  "picture"
   "intro"
   "menu";
 }
-
-aside {
-  grid-area:  aside;
+#picture {
+  grid-area: picture;
 }
-
 #intro {
-  grid-area:  intro;
+  grid-area: intro;
 }
 #address {
-  grid-area:  address;
+  grid-area: address;
 }
 #hours {
-  grid-area:  hours;
+  grid-area: hours;
 }
 #menu {
   grid-area: menu;
+}
+#gallery {
+  grid-area: gallery;
 }
 
 footer {
   display:  grid;
   grid-area:  footer;
-  grid-template-columns: max-content 1fr 1fr;
   grid-template-areas:
-  "contact contact contact"
-  "sam info info"
-  "map map map";
+  "contact"
+  "info"
+  "map";
 }
 footer #contact {
   grid-area:  contact;
 }
-footer #contact #sam {
+footer #sam {
   grid-area:  sam;
 }
-footer #contact ul {
+footer ul {
   grid-area: info;
 }
 footer #map {
@@ -291,13 +294,9 @@ img {
   max-width: 100%;
 }
 
-aside {
+section#picture {
   background: #3f4768;
-  background-image: url("../img/foodpic.jpg");
-  background-repeat:  no-repeat;
-  background-position:  left middle;
-  background-size:  cover;
-  z-index: 100 !important;
+  padding: 0;
 }
 
 main {
@@ -322,7 +321,7 @@ main {
 }
 
 #sam {
-  max-width: 50%;
+
 }
 
 /* === MEDIA QUERIES === */
@@ -385,7 +384,7 @@ p {
   font-size:  1.4em;
 }
 
-main, aside {
+main, #picture {
   grid-template-columns: 1fr 40% 40% 1fr;
 }
 

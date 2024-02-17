@@ -2,6 +2,7 @@
 require_once('getimages.php');
 $latest_menu = get_images('menus', true);
 $menu_date = date_from_filename($latest_menu);
+$gallery = get_images('gallery');
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +22,7 @@ $menu_date = date_from_filename($latest_menu);
   <!-- End social share meta tags -->
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/tiffin.css">
+  <link rel="stylesheet" href="css/kt.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <title>The Kitchen Treasury</title>
   <meta name="description" content="Cosy cafe with homemade seasonal meals in the heart of Kirkcaldy">
@@ -45,11 +46,13 @@ $menu_date = date_from_filename($latest_menu);
       </table>
     </section>
   </header>
-  <aside></aside>
   <main>
     <section id="intro">
       <p>
-Homemade meals & cakes
+Breakfast, lunch, snacks and cakes
+      </p>
+      <p>
+Everything made from scratch
       </p>
       <p>
 Local, seasonal ingredients
@@ -57,6 +60,9 @@ Local, seasonal ingredients
       <p>
 Vegan & gluten-free options
       </p>
+    </section>
+    <section id="picture">
+      <img src="img/foodpic.jpg" alt="A green mug containing a foamy latte, on a wooden table in a cosy cafe" />
     </section>
 
     <section id="menu">
@@ -66,7 +72,11 @@ Vegan & gluten-free options
     </section>
 
   </main>
-
+  <aside id="gallery">
+    <?foreach($gallery as $image):?>
+<img src="<?=$image?>" alt="Homemade food from The Kitchen Treasury" />
+    <?endforeach?>
+  </aside>
   <footer>
     <section id="contact">
       <h3>Contact</h3>
@@ -77,11 +87,9 @@ You can find us at <strong>34 Hunter Street, Kirkcaldy,</strong> Fife, Scotland.
 If you would like to book our homely cafe for a special event, or if you would like us to provide catering for you, please get in touch.
       </p>
     </section>
-    <img id="sam" src="img/sam.jpg" alt="A woman with curly hair and a big smile, ready to welcome you with cake" />
     <ul>
       <li><a href="tel:+447523 178969"><img src="img/icon_phone.png" alt="Tel:" /> 07523 178969</a></li>
       <li><a href="mailto:hello@kitchentreasury.com"><img src="img/icon_email.png" alt="Email:" /> hello@kitchentreasury.com</a></li>
-      <li><a href="https://wa.me/447523178969"><img src="img/icon_wa.png" alt="WhatsApp:" /> +44 7523 178969</a></li>
       <li><a href="https://www.facebook.com/people/The-Kitchen-Treasury/"><img src="img/icon_fb.png" alt="Facebook:" /> The-Kitchen-Treasury</a></li>
     </ul>
     <section id="map">
