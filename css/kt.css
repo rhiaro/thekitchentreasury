@@ -341,10 +341,12 @@ main {
 
 body {
   grid-template-columns: 1fr 1fr;
-}
-
-header {
-  grid-template-columns: 1fr minmax(200px,20%) 1fr;
+  grid-template-rows: max-content max-content 300px max-content;
+  grid-template-areas:
+  "header picture"
+  "main main"
+  "gallery gallery"
+  "footer footer";
 }
 
 body.admin {
@@ -353,9 +355,8 @@ body.admin {
 
 main {
   grid-template-areas:
-  ". intro intro ."
-  ". order hours .";
-  grid-template-columns: 1fr 48% 48% 1fr;
+  "menu intro";
+  grid-template-columns: 1fr 1fr;
 }
 
 p {
@@ -375,8 +376,9 @@ p {
 
 footer {
   grid-template-areas:
-  "map map contact contact";
-  grid-template-columns: 1fr 48% 48% 1fr;
+  "contact map"
+  "info map";
+  grid-template-columns: 1fr 1fr;
 }
 
 }
