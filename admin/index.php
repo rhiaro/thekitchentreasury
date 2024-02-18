@@ -63,16 +63,15 @@ $menu_date = date_from_filename($latest_menu);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/tiffin.css">
-  <title>[Admin] The Tiffin</title>
-  <meta name="description" content="Homecooked Punjabi street food, delivered to you, in Kirkcaldy and Fife">
+  <link rel="stylesheet" href="../css/kt.css">
+  <title>[Admin] The Kitchen Treasury</title>
 </head>
 <body class="admin">
   <header>
-    <h1><img src="../img/logo.png" alt="The Tiffin" /></h1>
+    <h1><a href="/"><img src="../img/kt3.png" alt="The Kitchen Treasury" /></a></h1>
   </header>
   <main>
-    <section id="intro">
+    <section>
       <h2>Update homepage</h2>
       <?if(isset($msg)):?>
         <p class="<?=$success ? "success":"fail"?>"><?=$msg?></p>
@@ -81,12 +80,6 @@ $menu_date = date_from_filename($latest_menu);
       <p><label for="menu">Upload menu for week of <?=$thisweek?>:</label></p>
       <p>
         <input type="file" name="menu" id="menu" />
-      </p>
-      <p><label for="days">Change delivery days for week of <?=$thisweek?>:</label></p>
-      <p>
-        <input name="days[]" value="Friday" id="fri" type="checkbox"<?=in_array("Friday",$days) ? " checked" : ""?> /><label for="fri">Friday</label>
-        <input name="days[]" value="Saturday" id="sat" type="checkbox"<?=in_array("Saturday",$days) ? " checked" : ""?> /><label for="sat">Saturday</label>
-        <input name="days[]" value="Sunday" id="sun" type="checkbox"<?=in_array("Sunday",$days) ? " checked" : ""?> /><label for="sun">Sunday</label>
       </p>
       <p><input type="submit" class="btn" name="update" value="Update" /></p>
       </form>

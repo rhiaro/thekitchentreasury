@@ -49,7 +49,7 @@ p {
   margin-top:  0.6em;
 }
 
-main p:after {
+body:not(.admin) main p:after {
   content: '~';
   display: block;
 }
@@ -231,7 +231,10 @@ body {
 }
 
 body.admin {
-  grid-template-rows: 0.4fr 2fr max-content max-content;
+  grid-template-rows: 0.4fr 1fr;
+  grid-template-areas:
+  "header"
+  "main"
 }
 
 header {
@@ -316,6 +319,11 @@ main {
   color: #fff;
 }
 
+body.admin main {
+  background-color: #fff;
+  color: #000;
+}
+
 .social img {
   transition: all 0.8s ease;
   margin-bottom: 1em;
@@ -356,7 +364,15 @@ body {
 }
 
 body.admin {
-  grid-template-rows: 0.4fr 2fr max-content max-content;
+  grid-template-areas:
+  "header"
+  "main";
+  grid-template-rows: 200px 1fr;
+  grid-template-columns: 1fr;
+}
+
+body.admin header img {
+  max-height: 180px;
 }
 
 main {
