@@ -49,6 +49,11 @@ p {
   margin-top:  0.6em;
 }
 
+main p:after {
+  content: '~';
+  display: block;
+}
+
 em {
   font-style: italic;
 }
@@ -125,6 +130,10 @@ footer {
 
 #address {
   font-size: 1.2em;
+}
+#address a {
+  text-decoration: none;
+  color: #fff;
 }
 
 #intro {
@@ -229,10 +238,12 @@ header {
   grid-area:  header;
   display:  grid;
   grid-template-columns: 1fr 15% 60% 15% 1fr;
+  grid-template-rows: max-content max-content max-content 1fr;
   grid-template-areas:
     ". . logo . ."
     "address address address address address"
-    ". hours hours hours .";
+    ". hours hours hours ."
+    ". . . . .";
   align-items:  end;
   padding:  1em;
 }
@@ -386,6 +397,11 @@ footer {
 
 @media only screen and (min-width: 1200px) {
 
+header { height: 100vh }
+
+h1 img {
+  max-width: 40%;
+}
 
 h2 {
   font-size:  2.4em;
@@ -395,8 +411,19 @@ p {
   font-size:  1.4em;
 }
 
-main, #picture {
-  grid-template-columns: 1fr 40% 40% 1fr;
+footer {
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-areas:
+  "contact . map"
+  "contact . map"
+  "contact info map";
+}
+footer {
+  text-align: left;
+}
+footer ul {
+  text-align: left;
+  font-size: 1.4em;
 }
 
 .center-sm {

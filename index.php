@@ -31,7 +31,7 @@ $gallery = get_images('gallery');
   <header>
     <h1><img src="img/kt3.png" alt="The Kitchen Treasury" /></h1>
     <section id="address">
-        <p>34 Hunter Street, Kirkcaldy</p>
+        <p><a href="#contact">34 Hunter Street, Kirkcaldy</a></p>
     </section>
     <section id="hours">
       <h3>Opening times</h3>
